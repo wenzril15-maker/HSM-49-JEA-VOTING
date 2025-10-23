@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSM-49 JEA MAA Election</title>
+  <style>
+    body {
+      background-color: #000000;  /* black background */
+      color: #FF0000;              /* red text */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      margin-bottom: 0.2em;
+    }
+    p.deadline {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .button {
+      display: inline-block;
+      margin: 0.8em;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      color: #000000;
+      background-color: #FF0000;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .thankyou {
+      font-size: 1.4em;
+      margin-top: 2em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>HSM-49 JEA MAA Election</h1>
+  <p class="deadline">Voting closes 28th October</p>
+
+  <div id="voteSection">
+    <button class="button" onclick="vote('AO2 Jenkins')">AO2 Jenkins</button>
+    <button class="button" onclick="vote('AO2 Meister')">AO2 Meister</button>
+    <button class="button" onclick="vote('AEAA Easter')">AEAA Easter</button>
+  </div>
+
+  <div id="thankyouSection" class="thankyou">
+    ✅ Thank you for voting!
+  </div>
+
+  <script>
+    function vote(name) {
+      // Here you would send “name” to your backend or Google Form etc.
+      console.log('Voted for:', name);
+      document.getElementById('voteSection').style.display = 'none';
+      document.getElementById('thankyouSection').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
